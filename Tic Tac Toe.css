@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap');
+
+
+body {
+    background-color: #C7AD7F;
+    font-family: 'Rubik Burned', system-ui;
+}
+.first {
+    display: flex;
+    border: 2px solid #8B4411;
+    border-radius: 9px;
+    background-color: #A57A5A;
+}
+.first h1 {
+    font-size: 50px;
+    color: #F5F5DD;
+    align-items: center;
+}
+.first img {
+    padding: 4px 0px 0px 0px;
+}
+.gameContainer{
+    background-color: rgba(255, 255, 0, 0.679);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.container{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+}
+.info{
+    font-size: 2vw;
+}
+.box{
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: #c7ac7f8b;
+    cursor: pointer;
+}
+.imgBox img {
+    width:  0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{ 
+    margin: 10px 20px 10px 20px;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background-color: rgba(165, 42, 42, 0.529);
+    color: white;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.line{
+    background-color: rgb(187, 72, 72);
+    width: 0vw;
+    height: 3.5px;
+    border-radius: 100px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+    /* translate: 12.79vw 14.93vw; */
+    /* transform: rotate(90deg) */
+    /* transform:translate(12.79vw, 14.93vw) rotate(90deg); */
+
+}
+
+@media screen and (max-width: 800px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 20px;
+    }
+    .gameInfo h1 {
+        font-size: 2rem;
+    }
+    .first h1 {
+        font-size: 2rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+    .info{
+        font-size: 2rem;
+    }
+}
